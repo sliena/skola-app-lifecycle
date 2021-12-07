@@ -3,3 +3,4 @@ config.ini
 log_migrate_db.yaml
 log/*.log
 log/*.log.*
+test.py
