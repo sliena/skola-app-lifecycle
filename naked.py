@@ -10,12 +10,16 @@ print('Asteroid processing service')
 
 # Initiating and reading config values
 print('Loading configuration from file')
-config = ConfigParser()
-config.read('config.ini')
-# 
-nasa_api_key = config.get('nasa', 'api_key')
-nasa_api_url = config.get('nasa', 'api_url')
+try:
+	config = ConfigParser()
+	config.read('config.ini')
 
+	nasa_api_key = config.get('nasa', 'api_key')
+	nasa_api_url = config.get('nasa', 'api_url')
+
+except:
+	print('')
+print('DONE')
 # Getting todays date
 dt = datetime.now()
 request_date = str(dt.year) + "-" + str(dt.month).zfill(2) + "-" + str(dt.day).zfill(2)  
