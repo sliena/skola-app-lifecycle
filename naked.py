@@ -1,5 +1,6 @@
 import logging
 import logging.config
+import mysql.connector
 import requests
 import json
 import datetime
