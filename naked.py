@@ -226,6 +226,8 @@ if __name__ == "__main__":
 			logger.info("Closest passing distance is for: " + str(ast_hazardous[0][0]) + " at: " + str(int(ast_hazardous[0][8])) + " km | more info: " + str(ast_hazardous[0][1]))
 		else:
 			logger.info("No asteroids close passing earth today")
+		push_asteroids_arrays_to_db(request_date, ast_hazardous, 1)
+		push_asteroids_arrays_to_db(request_date, ast_safe, 0)
 
 	# if return code isn't 200 (request was successful) print error message and response code + content
 	else:
